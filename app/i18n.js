@@ -20,6 +20,7 @@ export const appLocales = [
 import enTranslationMessages from './translations/en.json';
 import deTranslationMessages from './translations/de.json';
 
+
 export const formatTranslationMessages = (messages) => {
   const formattedMessages = {};
   for (const message of messages) {

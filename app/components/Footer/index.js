@@ -1,32 +1,21 @@
 import React from 'react';
-
-import messages from './messages';
-import A from 'components/A';
 import styles from './styles.css';
-import { FormattedMessage } from 'react-intl';
-import LocaleToggle from 'containers/LocaleToggle';
+import Img from 'components/Img';
 
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <section>
-        <p>
-          <FormattedMessage {...messages.licenseMessage} />
-        </p>
-      </section>
-      <section>
-        <LocaleToggle />
-      </section>
-      <section>
-        <p>
-          <FormattedMessage
-            {...messages.authorMessage}
-            values={{
-              author: <A href="https://twitter.com/mxstbr">Max Stoiber</A>,
-            }}
+      <div className={styles.content}>
+        <span>Made for better effectiveness by </span>
+        <a href="https://github.com/Dmytro-Medzatiy">
+          <span>D.Medzatyi </span>
+          <img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-256.png"
+             alt="github repo"
+             height="30px"
+             width="30px"
           />
-        </p>
-      </section>
+        </a>
+      </div>
     </footer>
   );
 }

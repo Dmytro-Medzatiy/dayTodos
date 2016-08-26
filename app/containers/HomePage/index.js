@@ -80,49 +80,14 @@ export class HomePage extends React.Component {
     }
 
     return (
-      <article>
-        <Helmet
-          title="Home Page"
-          meta={[
-            { name: 'description', content: 'A React.js Boilerplate application homepage' },
-          ]}
-        />
-        <div>
-          <section className={`${styles.textSection} ${styles.centered}`}>
-            <H2>
-              <FormattedMessage {...messages.startProjectHeader} />
-            </H2>
-            <p>
-              <FormattedMessage {...messages.startProjectMessage} />
-            </p>
-          </section>
-          <section className={styles.textSection}>
-            <H2>
-              <FormattedMessage {...messages.trymeHeader} />
-            </H2>
-            <form className={styles.usernameForm} onSubmit={this.props.onSubmitForm}>
-              <label htmlFor="username">
-                <FormattedMessage {...messages.trymeMessage} />
-                <span className={styles.atPrefix}>
-                  <FormattedMessage {...messages.trymeAtPrefix} />
-                </span>
-                <input
-                  id="username"
-                  className={styles.input}
-                  type="text"
-                  placeholder="mxstbr"
-                  value={this.props.username}
-                  onChange={this.props.onChangeUsername}
-                />
-              </label>
-            </form>
-            {mainContent}
-          </section>
-          <Button handleRoute={this.openFeaturesPage}>
-            <FormattedMessage {...messages.featuresButton} />
-          </Button>
-        </div>
-      </article>
+      <div>
+
+<h1>Hello from home page</h1>
+
+      </div>
+
+
+
     );
   }
 }
@@ -165,3 +130,49 @@ const mapStateToProps = createStructuredSelector({
 
 // Wrap the component to inject dispatch and state into it
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
+
+
+/*
+<article>
+  <Helmet
+    title="Home Page"
+    meta={[
+            { name: 'description', content: 'A React.js Boilerplate application homepage' },
+          ]}
+  />
+  <div>
+    <section className={`${styles.textSection} ${styles.centered}`}>
+      <H2>
+        <FormattedMessage {...messages.startProjectHeader} />
+      </H2>
+      <p>
+        <FormattedMessage {...messages.startProjectMessage} />
+      </p>
+    </section>
+    <section className={styles.textSection}>
+      <H2>
+        <FormattedMessage {...messages.trymeHeader} />
+      </H2>
+      <form className={styles.usernameForm} onSubmit={this.props.onSubmitForm}>
+        <label htmlFor="username">
+          <FormattedMessage {...messages.trymeMessage} />
+                <span className={styles.atPrefix}>
+                  <FormattedMessage {...messages.trymeAtPrefix} />
+                </span>
+          <input
+            id="username"
+            className={styles.input}
+            type="text"
+            placeholder="mxstbr"
+            value={this.props.username}
+            onChange={this.props.onChangeUsername}
+          />
+        </label>
+      </form>
+      {mainContent}
+    </section>
+    <Button handleRoute={this.openFeaturesPage}>
+      <FormattedMessage {...messages.featuresButton} />
+    </Button>
+  </div>
+</article>*/
